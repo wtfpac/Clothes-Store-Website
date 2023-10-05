@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .barraHeader {
     position: fixed;
@@ -35,14 +35,13 @@ body {
 .sidebar {
     background-color: #f1f1f1;
     width: 4%;
-    z-index: 1;
     height: 100vh;
     min-width: 4%;
 }
 .ondas {
-    left: -53.5%;
-    top: 24%;
-    height: 44%;
+    left: -57%;
+    top: 23%;
+    height: 42%;
     width: 100vw;
     position: absolute;
 }
@@ -54,12 +53,32 @@ body {
 }
 
 .containerContent {
-    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
     position: relative;
     color: white;
-    display: flex;
     flex-direction: column;
+}
+
+.column {
+    flex: 1;
+    float: left;
+    width: 44%;
+}
+
+.column2 {
+    position: relative;
+    float: right;
+    width: 55.3%;
+    height: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .navbar {
@@ -103,7 +122,7 @@ body {
 
 .search-bar {
     background-color: white;
-    width: 150px;
+    width: 10vw;
     padding: 7px 20px;
     border-radius: 15px;
     color: black;
@@ -149,10 +168,10 @@ body {
 }
 
 .titulo {
-    width: 40%;
+    width: 75%;
     height: 50%;
     text-align: left;
-    margin-left: 6.1%;
+    margin-left: 14%;
     margin-top: 3%;
 }
 .titulo1 {
@@ -161,6 +180,7 @@ body {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: white;
+    margin-top: 13%;
 }
 .titulo2 {
     font-family: monoton;
@@ -196,7 +216,8 @@ body {
     border-width: 3.5px;
     height: 6vh;
     width: 13vw;
-    margin-left: 6.1%;
+    margin-left: 14%;
+    margin-top: 6%;
 }
 
 .shopNow {
@@ -206,4 +227,46 @@ body {
     font-weight: 500;
     text-decoration: none;
     color: white;
+}
+
+.linkSite {
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 14%;
+    margin-top: 4%;
+}
+
+.textConteiner {
+    font-family: montserrat;
+    text-transform: uppercase;
+    height: 62%;
+    width: 75%;
+    text-align: right;
+    position: relative;
+}
+
+.quadrado {
+    width: 75%;
+    height: 60%;
+    z-index: 2;
+    border-style: solid;
+    border-color: #e2b250;
+    border-width: 2px;
+}
+
+.discount {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    margin-bottom: 50px;
+}
+.discountValue {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 400;
+    font-size: 80px;
+    margin: 0 auto;
 }
